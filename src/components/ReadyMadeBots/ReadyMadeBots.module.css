@@ -1,0 +1,65 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-10);
+}
+
+.card {
+    padding: var(--space-8);
+    position: relative;
+    overflow: hidden;
+}
+
+.cardIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    background: rgba(99, 102, 241, 0.05);
+    color: var(--color-primary);
+    margin-bottom: var(--space-5);
+    transition: all var(--transition-base);
+}
+
+.card:hover .cardIcon {
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.cardTitle {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+    color: var(--color-text-primary);
+}
+
+.cardDescription {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.sectionHeader {
+    max-width: 600px;
+}
+
+.tagline {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    margin-top: var(--space-4);
+    line-height: 1.7;
+}
+
+.emphasis {
+    margin-top: var(--space-8);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.emphasisSub {
+    color: var(--color-secondary);
+    font-weight: 700;
+}
