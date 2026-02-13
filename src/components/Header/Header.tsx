@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { NAV_LINKS } from '@/lib/constants';
+import { NAV_LINKS, BASE_PATH } from '@/lib/constants';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -23,7 +23,7 @@ export default function Header() {
                 <div className={styles.headerInner}>
                     <a href="#hero" className={styles.logo}>
                         <Image
-                            src="/logo.png"
+                            src={`${BASE_PATH}/logo.png`}
                             alt="AWATAR9 Logo"
                             width={140}
                             height={40}

@@ -2,12 +2,14 @@
 // AWATAR9 — Content Constants & Data
 // ============================================
 
+export const BASE_PATH = process.env.NODE_ENV === 'production' ? '/Awatar9' : '';
+
 export const SITE = {
     name: 'AWATAR9',
     tagline: 'Designing AI That Delivers',
     description:
         'At AWATAR9, we design smart AI agents for real business challenges. Ready-made and custom AI bots that think, act, and deliver results.',
-    url: 'https://awatar9.com',
+    url: 'https://saipraveenmolugu.github.io/Awatar9',
 } as const;
 
 export const NAV_LINKS = [

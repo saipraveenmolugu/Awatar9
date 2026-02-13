@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Linkedin, Twitter, Mail } from 'lucide-react';
+import { BASE_PATH } from '@/lib/constants';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -19,7 +20,7 @@ export default function Footer() {
                     <div className={styles.footerBrand}>
                         <div className={styles.footerLogo}>
                             <Image
-                                src="/logo.png"
+                                src={`${BASE_PATH}/logo.png`}
                                 alt="AWATAR9 Logo"
                                 width={140}
                                 height={40}

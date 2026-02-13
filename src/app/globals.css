@@ -7,6 +7,7 @@
   /* Brand Colors - Avatar Sample Palette */
   --color-primary: #4dffb5;
   --color-primary-rgb: 77, 255, 181;
+  --color-primary-light: rgba(77, 255, 181, 0.15);
   --color-secondary: #6ea8ff;
   --color-accent: #c77dff;
 
@@ -30,9 +31,14 @@
   --gradient-card: linear-gradient(180deg, #0c1330, #070b20);
   --gradient-accent: linear-gradient(135deg, #4dffb5, #6ea8ff);
 
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+
   /* Typography */
-  --font-heading: 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  /* Fonts are provided by Next.js font loader in layout.tsx via CSS variables */
+  /* --font-heading and --font-body are already defined on the html element */
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
