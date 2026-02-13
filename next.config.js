@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: '/Awatar9',
+    // basePath: '/Awatar9',
     images: {
         unoptimized: true,
     },

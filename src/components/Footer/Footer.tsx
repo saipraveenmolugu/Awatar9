@@ -1,8 +1,15 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import { Linkedin, Twitter, Mail } from 'lucide-react';
 import styles from './Footer.module.css';
 
 export default function Footer() {
-    const year = new Date().getFullYear();
+    const [year, setYear] = useState(new Date().getFullYear());
+
+    useEffect(() => {
+        setYear(new Date().getFullYear());
+    }, []);
 
     return (
         <footer className={styles.footer}>
