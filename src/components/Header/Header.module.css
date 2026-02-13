@@ -7,13 +7,14 @@
     height: var(--header-height);
     display: flex;
     align-items: center;
-    transition: background var(--transition-base), box-shadow var(--transition-base);
+    backdrop-filter: blur(14px);
+    background: rgba(5, 9, 20, 0.75);
+    border-bottom: 1px solid var(--color-border);
+    transition: background var(--transition-base);
 }
 
 .headerScrolled {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    background: rgba(5, 9, 20, 0.9);
 }
 
 .headerInner {
@@ -23,21 +24,34 @@
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 var(--space-6);
+    padding: 0 var(--space-12);
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: var(--text-xl);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
     font-weight: 800;
-    letter-spacing: -0.04em;
     color: var(--color-text-primary);
+}
+
+.logoImage {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: opacity var(--transition-fast);
+}
+
+.logoImage:hover {
+    opacity: 1;
 }
 
 .nav {
     display: flex;
     align-items: center;
-    gap: var(--space-8);
+    gap: 32px;
 }
 
 .navLink {
@@ -49,61 +63,44 @@
 }
 
 .navLink:hover {
-    color: var(--color-text-primary);
-}
-
-.navLink::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--gradient-primary);
-    border-radius: 1px;
-    transition: width var(--transition-base);
-}
-
-.navLink:hover::after {
-    width: 100%;
+    color: var(--color-primary);
 }
 
 .ctaButton {
-    padding: var(--space-2) var(--space-6);
-    font-size: var(--text-xs);
-    font-weight: 700;
-    color: white;
-    background: var(--color-primary);
-    border-radius: var(--radius-full);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    transition: all var(--transition-fast);
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: #02040f;
+    background: var(--gradient-primary);
+    transition: all var(--transition-base);
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 .ctaButton:hover {
-    background: var(--color-primary-dark);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(77, 255, 181, 0.3);
 }
 
 .mobileToggle {
     display: none;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
     padding: var(--space-2);
 }
 
 .mobileToggle span {
     display: block;
-    width: 24px;
+    width: 26px;
     height: 2px;
     background: var(--color-text-primary);
     border-radius: 2px;
-    transition: transform var(--transition-base), opacity var(--transition-base);
+    transition: all var(--transition-base);
 }
 
 .mobileToggle.open span:nth-child(1) {
-    transform: rotate(45deg) translateY(7px);
+    transform: rotate(45deg) translateY(8px) translateX(3px);
 }
 
 .mobileToggle.open span:nth-child(2) {
@@ -111,7 +108,7 @@
 }
 
 .mobileToggle.open span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-7px);
+    transform: rotate(-45deg) translateY(-8px) translateX(3px);
 }
 
 .mobileNav {
@@ -121,12 +118,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(20px);
+    background: var(--color-bg-primary);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: var(--space-8);
+    gap: 32px;
     z-index: 999;
 }
 
@@ -135,7 +131,6 @@
 }
 
 .mobileNavLink {
-    font-family: var(--font-heading);
     font-size: var(--text-2xl);
     font-weight: 600;
     color: var(--color-text-secondary);
@@ -143,10 +138,14 @@
 }
 
 .mobileNavLink:hover {
-    color: var(--color-text-primary);
+    color: var(--color-primary);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .headerInner {
+        padding: 0 var(--space-8);
+    }
+
     .nav {
         display: none;
     }

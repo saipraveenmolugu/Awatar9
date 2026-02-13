@@ -6,32 +6,36 @@
 }
 
 .card {
-    padding: var(--space-6);
+    background: var(--gradient-card);
+    padding: 24px;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
     display: flex;
     align-items: center;
-    gap: var(--space-4);
+    gap: 16px;
+    transition: var(--transition-base);
+}
+
+.card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-5px);
 }
 
 .cardIcon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: var(--radius-md);
-    background: rgba(0, 212, 170, 0.08);
-    color: var(--color-secondary);
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--gradient-accent);
+    color: #02040f;
     flex-shrink: 0;
-    transition: background var(--transition-base), transform var(--transition-base);
-}
-
-.card:hover .cardIcon {
-    background: rgba(0, 212, 170, 0.12);
-    transform: scale(1.1);
+    transition: all var(--transition-base);
 }
 
 .cardText {
-    font-size: var(--text-base);
+    font-size: 16px;
     font-weight: 600;
     color: var(--color-text-primary);
 }

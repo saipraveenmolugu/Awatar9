@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Linkedin, Twitter, Mail } from 'lucide-react';
 import styles from './Footer.module.css';
 
@@ -16,7 +17,15 @@ export default function Footer() {
             <div className="container">
                 <div className={styles.footerInner}>
                     <div className={styles.footerBrand}>
-                        <div className={styles.footerLogo}>AWATAR9</div>
+                        <div className={styles.footerLogo}>
+                            <Image
+                                src="/logo.png"
+                                alt="AWATAR9 Logo"
+                                width={140}
+                                height={40}
+                                className={styles.logoImage}
+                            />
+                        </div>
                         <p className={styles.footerTagline}>
                             Designing AI That Delivers. We build smart AI agents for real
                             business challenges — ready-made and custom solutions.

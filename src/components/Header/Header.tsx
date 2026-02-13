@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { NAV_LINKS } from '@/lib/constants';
 import styles from './Header.module.css';
 
@@ -21,7 +22,14 @@ export default function Header() {
             <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
                 <div className={styles.headerInner}>
                     <a href="#hero" className={styles.logo}>
-                        AWATAR9
+                        <Image
+                            src="/logo.png"
+                            alt="AWATAR9 Logo"
+                            width={140}
+                            height={40}
+                            className={styles.logoImage}
+                            priority
+                        />
                     </a>
 
                     <nav className={styles.nav}>
