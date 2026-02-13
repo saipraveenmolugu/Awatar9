@@ -1,7 +1,9 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    // basePath: '/Awatar9',
+    basePath: isProd ? '/Awatar9' : '',
     images: {
         unoptimized: true,
     },
