@@ -51,14 +51,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          # Automatically inject basePath in your Next.config.js if you have a path like /repo-name
-          # and help with static image optimization from next/image
-          static_site_generator: next
       - name: Restore cache
         uses: actions/cache@v4
         with:
