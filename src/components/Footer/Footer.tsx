@@ -19,13 +19,19 @@ export default function Footer() {
                 <div className={styles.footerInner}>
                     <div className={styles.footerBrand}>
                         <div className={styles.footerLogo}>
-                            <Image
-                                src={`${BASE_PATH}/logo.png`}
-                                alt="AWATAR9 Logo"
-                                width={140}
-                                height={40}
-                                className={styles.logoImage}
-                            />
+                            <div className={styles.logoIconWrapper}>
+                                <Image
+                                    src={`${BASE_PATH}/logo.png`}
+                                    alt="AWATAR9 Icon"
+                                    width={140}
+                                    height={40}
+                                    className={styles.logoImage}
+                                />
+                            </div>
+                            <span className={styles.logoText}>
+                                AWATAR
+                                <span className={styles.logoNumber}>9</span>
+                            </span>
                         </div>
                         <p className={styles.footerTagline}>
                             Designing AI That Delivers. We build smart AI agents for real

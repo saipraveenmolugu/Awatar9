@@ -30,18 +30,40 @@
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 22px;
+    gap: 8px;
+    font-family: var(--font-heading);
+    font-size: 24px;
     font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
     color: var(--color-text-primary);
+    text-decoration: none;
+}
+
+.logoIconWrapper {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
 .logoImage {
-    height: 48px;
+    height: 32px;
     width: auto;
-    object-fit: contain;
-    opacity: 0.85;
+    object-fit: cover;
+    object-position: left;
     transition: opacity var(--transition-fast);
+}
+
+.logoText {
+    display: flex;
+    align-items: center;
+}
+
+.logoNumber {
+    color: var(--color-primary);
+    margin-left: 6px;
 }
 
 .logoImage:hover {
