@@ -26,8 +26,8 @@ export default function Header() {
                             <Image
                                 src={`${BASE_PATH}/logo.png`}
                                 alt="AWATAR9 Icon"
-                                width={140}
-                                height={40}
+                                width={180}
+                                height={60}
                                 className={styles.logoImage}
                                 priority
                             />
