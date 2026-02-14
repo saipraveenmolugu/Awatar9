@@ -41,15 +41,15 @@
 }
 
 .logoIconWrapper {
-    height: 32px;
-    width: 32px;
+    height: 40px;
+    width: 40px;
     display: flex;
     align-items: center;
     overflow: hidden;
 }
 
 .logoImage {
-    height: 32px;
+    height: 40px;
     width: auto;
     object-fit: cover;
     object-position: left;
